@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    category = Category.includes(:products).find(params[:id])
-    render json: category, status: 200
+    category = Category.includes(:products).order('products.score DESC')
+    render json: category.find(params[:id]), status: 200
   end
 end
