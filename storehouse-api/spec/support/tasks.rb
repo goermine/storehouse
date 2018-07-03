@@ -1,4 +1,5 @@
 require "rake"
+require 'active_support'
 
 module TaskExampleGroup
   extend ActiveSupport::Concern
